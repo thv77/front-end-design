@@ -1,10 +1,10 @@
 {
-  "name": "website-cloner",
+  "name": "front-end-design",
   "version": "1.0.0",
   "type": "module",
-  "description": "Frontend website cloner preserving exact design, scroll animations, and motion graphics",
+  "description": "Interactive WebGL motion graphics and smooth scrolling frontend design system",
   "scripts": {
-    "start": "node server.js"
+    "start": "node preview.mjs",
+    "preview": "node preview.mjs"
   }
 }
-

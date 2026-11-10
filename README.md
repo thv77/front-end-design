@@ -1,76 +1,76 @@
-# BAGACAYA (Proto-Relay) Frontend Clone
+# Front-End Motion & WebGL Design System
 
-This is a complete, pixel-perfect frontend clone of **[bagacaya.com/files/proto-relay](https://bagacaya.com/files/proto-relay)** with all exact animations, motion graphics, and styling preserved.
+A high-performance, pixel-perfect frontend interactive design system featuring custom Three.js WebGL particle streams, bloom post-processing passes, spring-physics animations, and smooth inertia scrolling.
 
 ---
 
-## 🌟 Preserved Animations & Motion Graphics
+## 🌟 Key Features & Animations
 
-- **Lime Particle Stream (Page-long WebGL canvas)**:
-  - Custom Three.js shaders and Catmull-Rom curve simulation.
-  - Multi-tier particle count with dynamic DPR scaling.
-  - UnrealBloom postprocessing passes (`EffectComposer`, `RenderPass`, `UnrealBloomPass`, `OutputPass`).
+- **WebGL Particle Stream (Page-Long Canvas)**:
+  - Custom Three.js GLSL shaders along dynamic Catmull-Rom spline curves.
+  - Multi-tier particle count scaling with adaptive device-pixel-ratio (DPR).
+  - Post-processing bloom pipeline using `EffectComposer`, `UnrealBloomPass`, and custom output shaders.
 - **Smooth Inertia Scrolling**:
-  - Powered by Lenis (`lenis.mjs`) with wheel inertia and spring physics.
+  - Powered by the **Lenis** smooth wheel scrolling engine with spring constants and momentum physics.
 - **Ring-and-Fold Preloader**:
-  - Custom spring constant timing, stage opacity transition, and fold-in hero reveal.
-- **Lime Logo Fold System**:
-  - Interactive plate expanding out of the logo glyph and folding back seamlessly.
-- **52 Graphic & Media Assets**:
-  - All SVG marks, UI icons, dot fields, bloom WebP/PNG maps, avatars, and signal indicators preserved locally under `./cloned_bagacaya_relay/assets/`.
-- **Local Vendor Runtimes**:
-  - Three.js (`three.module.js`) and Lenis smooth scrolling bundled locally in `./cloned_bagacaya_relay/vendor/`.
+  - Timed stage opacity transitions, paint performance observers, and fold-in hero reveal sequence.
+- **Interactive Component Systems**:
+  - Spring-driven navigation plate expansion and docking.
+  - Interactive pricing knobs, live metric signals, SVG dot matrices, and glowing bloom cards.
+- **100% Offline & Self-Contained**:
+  - All 52 SVG graphics, WebP blooms, textures, and runtime modules (`Three.js`, `Lenis`) are bundled locally with relative asset paths.
 
 ---
 
-## 🚀 How to Run the Cloned Site
+## 🚀 Getting Started
 
-You can start the local preview server with one simple command:
+### Local Preview
+Run the included preview server:
 
 ```bash
-node preview.mjs
+npm start
 ```
 
-Then open your browser to:
-👉 **[http://localhost:8080](http://localhost:8080)**
+Open your browser to:
+👉 **[http://localhost:8080](http://localhost:8080)** (or the port shown in your terminal)
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Architecture
 
 ```text
-websiteecloner/
-├── cloned_bagacaya_relay/
-│   ├── index.html                   # Complete frontend with animations & shaders
-│   ├── assets/                      # 52 local SVGs, PNGs, WebP blooms, dot fields
-│   │   ├── backdrop/
-│   │   ├── footer/
-│   │   ├── hero/
-│   │   ├── integrations/
-│   │   ├── nav/
-│   │   ├── pricing/
-│   │   ├── product/
-│   │   ├── proof/
-│   │   ├── scale/
-│   │   ├── signals/
-│   │   └── statement/
-│   └── vendor/                      # Three.js + Lenis + Postprocessing passes
-│       ├── three.module.js
-│       ├── lenis.mjs
-│       ├── postprocessing/
-│       │   ├── EffectComposer.js
-│       │   ├── UnrealBloomPass.js
-│       │   ├── RenderPass.js
-│       │   ├── OutputPass.js
-│       │   ├── Pass.js
-│       │   ├── ShaderPass.js
-│       │   └── MaskPass.js
-│       └── shaders/
-│           ├── CopyShader.js
-│           ├── LuminosityHighPassShader.js
-│           └── OutputShader.js
-├── preview.mjs                      # Local HTTP preview server (port 8080)
-├── clone_relay.mjs                  # Asset synchronization & clone pipeline script
+front-end-design/
+├── index.html                   # Complete single-page frontend application
+├── assets/                      # 52 local SVG marks, PNGs, WebP blooms & textures
+│   ├── backdrop/
+│   ├── footer/
+│   ├── hero/
+│   ├── integrations/
+│   ├── nav/
+│   ├── pricing/
+│   ├── product/
+│   ├── proof/
+│   ├── scale/
+│   ├── signals/
+│   └── statement/
+├── vendor/                      # Bundled Three.js engine & Lenis smooth scroll
+│   ├── three.core.js
+│   ├── three.module.js
+│   ├── lenis.mjs
+│   ├── postprocessing/          # EffectComposer, UnrealBloomPass, RenderPass
+│   └── shaders/                 # GLSL Shaders & Bloom passes
+├── preview.mjs                  # Lightweight local HTTP preview server
+├── package.json
 └── README.md
 ```
 
+---
+
+## 🌐 Deployment
+
+### GitHub Pages
+1. In your GitHub repository, navigate to **Settings > Pages**.
+2. Under **Build and deployment > Source**, select **GitHub Actions** (the included workflow deploys automatically on every push) or choose **Deploy from a branch** (`main` / `/(root)`).
+
+### Vercel / Netlify
+Deploy directly by connecting your repository. No build step required — the site is ready to serve statically out of the box.

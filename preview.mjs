@@ -76,7 +76,7 @@ server.on('error', (err) => {
 
 server.listen(PORT, () => {
   console.log(`\n======================================================`);
-  console.log(`🚀 Preview Server Running for BAGACAYA (Proto-Relay)`);
+  console.log(`🚀 Preview Server Running for RELAY (Frontend Design System)`);
   console.log(`👉 Open: http://localhost:${PORT}`);
   console.log(`   - Smooth scroll (Lenis) active`);
   console.log(`   - Three.js WebGL particle stream active`);
