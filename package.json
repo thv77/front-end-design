@@ -1,0 +1,10 @@
+{
+  "name": "website-cloner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Frontend website cloner preserving exact design, scroll animations, and motion graphics",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+

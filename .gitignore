@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+.npm/
+
+# Local cache & logs
+*.log
+.DS_Store
+Thumbs.db
+cloned_sites/
